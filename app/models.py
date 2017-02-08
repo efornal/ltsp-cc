@@ -49,6 +49,14 @@ class PossibleAttributeValue(models.Model):
         blank=False,
         verbose_name=_('attribute')
     )
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name=_('created_at')
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True,
+        verbose_name=_('updated_at')
+    )
 
     class Meta:
         db_table = 'possible_attribute_values'
@@ -76,6 +84,14 @@ class Group(models.Model):
         Attribute,
         through='GroupAttributeValue',
         verbose_name = _('attributes')
+    )
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name=_('created_at')
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True,
+        verbose_name=_('updated_at')
     )
 
     class Meta:
@@ -106,6 +122,14 @@ class GroupAttributeValue(models.Model):
         null=True,
         blank=True,
         verbose_name=_('value')
+    )
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name=_('created_at')
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True,
+        verbose_name=_('updated_at')
     )
 
     class Meta:
@@ -142,6 +166,14 @@ class Node(models.Model):
         through='NodeAttributeValue',
         verbose_name=_('attributes')
     )
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name=_('created_at')
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True,
+        verbose_name=_('updated_at')
+    )
 
     class Meta:
         db_table = 'nodes'
@@ -170,6 +202,14 @@ class NodeAttributeValue(models.Model):
         null=True,
         blank=True,
         verbose_name=_('value')
+    )
+    created_at = models.DateTimeField(
+        auto_now_add=True,
+        verbose_name=_('created_at')
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True,
+        verbose_name=_('updated_at')
     )
 
     class Meta:
