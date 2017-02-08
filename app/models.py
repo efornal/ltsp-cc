@@ -57,3 +57,56 @@ class PossibleAttributeValue(models.Model):
 
     def __unicode__(self):
         return "{} : {}".format(self.attribute.name, self.value)
+
+
+class Group(models.Model):
+    name = models.CharField(
+        max_length=254,
+        null=False,
+        blank=False,
+        verbose_name=_('name')
+    )
+    parent = models.ForeignKey(
+        'self',
+        null=True,
+        blank=True,
+        verbose_name=_('parent')
+    )
+
+    class Meta:
+        db_table = 'groups'
+        verbose_name = _('Group')
+        verbose_name_plural = _('Groups')
+
+    def __unicode__(self):
+        return "{}".format(self.name)
+
+
+class GroupAttributeValue(models.Model):
+    attribute = models.ForeignKey(
+        Attribute,
+        null=False,
+        blank=False,
+        verbose_name=_('attribute')
+
+    )
+    group = models.ForeignKey(
+        Group,
+        null=False,
+        blank=False,
+        verbose_name=_('group')
+    )
+    value = models.CharField(
+        max_length=200,
+        null=True,
+        blank=True,
+        verbose_name=_('value')
+    )
+
+    class Meta:
+        db_table = 'group_attribute_values'
+        verbose_name = _('GroupAttributeValue')
+        verbose_name_plural = _('GroupAttributeValues')
+
+    def __unicode__(self):
+        return "{}: {} = {}".format(self.group, self.attribute, self.value)
