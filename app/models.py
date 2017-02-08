@@ -115,3 +115,62 @@ class GroupAttributeValue(models.Model):
 
     def __unicode__(self):
         return "{}: {} = {}".format(self.group, self.attribute, self.value)
+
+
+    
+class Node(models.Model):
+    dns_name = models.CharField(
+        max_length=200,
+        null=False,
+        blank=False,
+        verbose_name=_('dns_name')
+        )
+    mac_address = models.CharField(
+        max_length=200,
+        null=True,
+        blank=True,
+        verbose_name=_('mac_address')
+        )
+    group = models.ForeignKey(
+        Group,
+        null=True,
+        blank=True,
+        verbose_name=_('group')
+    )
+
+    class Meta:
+        db_table = 'nodes'
+        verbose_name = _('Node')
+        verbose_name_plural = _('Nodes')
+
+    def __unicode__(self):
+        return "{}".format(self.dns_name)
+
+
+class NodeAttributeValue(models.Model):
+    attribute = models.ForeignKey(
+        Attribute,
+        null=False,
+        blank=False,
+        verbose_name=_('attribute')
+    )
+    node = models.ForeignKey(
+        Node,
+        null=False,
+        blank=False,
+        verbose_name=_('node')
+    )
+    value = models.CharField(
+        max_length=200,
+        null=True,
+        blank=True,
+        verbose_name=_('value')
+    )
+
+    class Meta:
+        db_table = 'node_attribute_values'
+        verbose_name = _('NodeAttributeValue')
+        verbose_name_plural = _('NodeAttributeValues')
+
+    def __unicode__(self):
+        return "{}: {} = {}".format(self.node, self.attribute, self.value)
