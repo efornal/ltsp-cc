@@ -72,6 +72,11 @@ class Group(models.Model):
         blank=True,
         verbose_name=_('parent')
     )
+    attributes = models.ManyToManyField(
+        Attribute,
+        through='GroupAttributeValue',
+        verbose_name = _('attributes')
+    )
 
     class Meta:
         db_table = 'groups'
