@@ -137,6 +137,11 @@ class Node(models.Model):
         blank=True,
         verbose_name=_('group')
     )
+    attributes = models.ManyToManyField(
+        Attribute,
+        through='NodeAttributeValue',
+        verbose_name=_('attributes')
+    )
 
     class Meta:
         db_table = 'nodes'
