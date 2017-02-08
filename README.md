@@ -12,7 +12,7 @@ pip install -r app/requirements.txt
 
 ### Application configuration
 ```bash
-cp pulmo/settings.tpl.py pulmo/settings.py
+cp ltspcc/settings.tpl.py ltspcc/settings.py
 ```
 
 ### Util commands
