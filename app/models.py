@@ -15,11 +15,13 @@ class Attribute(models.Model):
     type = models.CharField(
         max_length=254,
         null=True,
+        blank=True,
         verbose_name=_('type')
     )
     default = models.CharField(
         max_length=254,
         null=True,
+        blank=True,
         verbose_name=_('default')
     )
     description = models.TextField(
@@ -41,8 +43,7 @@ class Attribute(models.Model):
 class PossibleAttributeValue(models.Model):
     value = models.CharField(
         max_length=200,
-        null=True,
-        blank=True,
+        null=False,
         verbose_name=_('value')
     )
     attribute = models.ForeignKey(
