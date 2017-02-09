@@ -12,6 +12,16 @@ class Attribute(models.Model):
         null=False,
         verbose_name=_('name')
     )
+    type = models.CharField(
+        max_length=254,
+        null=True,
+        verbose_name=_('type')
+    )
+    default = models.CharField(
+        max_length=254,
+        null=True,
+        verbose_name=_('default')
+    )
     description = models.TextField(
         max_length=400,
         null=True,
