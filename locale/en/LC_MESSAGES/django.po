@@ -1,0 +1,130 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-09 11:18-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: app/models.py:13 app/models.py:70
+msgid "name"
+msgstr "name"
+
+#: app/models.py:19
+msgid "type"
+msgstr "type"
+
+#: app/models.py:25
+msgid "default"
+msgstr "default"
+
+#: app/models.py:31
+msgid "description"
+msgstr "description"
+
+#: app/models.py:36
+msgid "Attribute"
+msgstr "Attribute"
+
+#: app/models.py:37
+msgid "Attributes"
+msgstr "Attributes"
+
+#: app/models.py:47 app/models.py:119 app/models.py:191
+msgid "value"
+msgstr "value"
+
+#: app/models.py:53 app/models.py:106 app/models.py:179
+msgid "attribute"
+msgstr "attribute"
+
+#: app/models.py:58
+msgid "PossibleAttributeValue"
+msgstr "Possible attribute value"
+
+#: app/models.py:59
+msgid "PossibleAttributeValues"
+msgstr "Possible attribute values"
+
+#: app/models.py:76
+msgid "parent"
+msgstr "parent"
+
+#: app/models.py:81 app/models.py:154
+msgid "attributes"
+msgstr "attributes"
+
+#: app/models.py:85 app/models.py:158
+msgid "created_at"
+msgstr "created_at"
+
+#: app/models.py:89 app/models.py:162
+msgid "updated_at"
+msgstr "updated_at"
+
+#: app/models.py:94
+msgid "Group"
+msgstr "Group"
+
+#: app/models.py:95
+msgid "Groups"
+msgstr "Groups"
+
+#: app/models.py:113 app/models.py:149
+msgid "group"
+msgstr "group"
+
+#: app/models.py:124
+msgid "GroupAttributeValue"
+msgstr "Group attribute value"
+
+#: app/models.py:125
+msgid "GroupAttributeValues"
+msgstr "Group attribute values"
+
+#: app/models.py:137
+msgid "dns_name"
+msgstr "DNS name"
+
+#: app/models.py:143
+msgid "mac_address"
+msgstr "MAC address"
+
+#: app/models.py:167
+msgid "Node"
+msgstr "Node"
+
+#: app/models.py:168
+msgid "Nodes"
+msgstr "Nodes"
+
+#: app/models.py:185
+msgid "node"
+msgstr "node"
+
+#: app/models.py:196
+msgid "NodeAttributeValue"
+msgstr "Node attribute value"
+
+#: app/models.py:197
+msgid "NodeAttributeValues"
+msgstr "Node attribute values"
+
+#: ltspcc/settings.py:119 ltspcc/settings.tpl.py:119
+msgid "Spanish"
+msgstr "Spanish"
+
+#: ltspcc/settings.py:120 ltspcc/settings.tpl.py:120
+msgid "English"
+msgstr "English"

@@ -120,6 +120,9 @@ LANGUAGES = (
   ('en', _('English')),
 )
 
+LOCALE_PATHS = (
+     BASE_DIR + '/locale', )
+
 TIME_ZONE = 'America/Argentina/Buenos_Aires'
 
 USE_I18N = True
